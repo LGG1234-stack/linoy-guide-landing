@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /og-image.html
+
+Sitemap: https://guide.linoyclinic.com/sitemap.xml

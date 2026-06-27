@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{
+  font-family:'Heebo',sans-serif;
+  background:
+    radial-gradient(620px 460px at 88% 18%, rgba(168,194,144,.42), transparent 70%),
+    radial-gradient(560px 520px at 6% 96%, rgba(57,66,57,.55), transparent 70%),
+    linear-gradient(135deg,#5A6458,#4c5550);
+  color:#F3EFE7;position:relative;display:flex;flex-direction:column;
+  justify-content:center;padding:78px 92px;
+}
+.leaf{position:absolute;top:-30px;left:60px;opacity:.16;width:230px}
+.frame{position:absolute;inset:26px;border:1px solid rgba(243,239,231,.22);border-radius:30px;pointer-events:none}
+.eyebrow{
+  display:inline-block;align-self:flex-start;font-size:24px;font-weight:600;
+  letter-spacing:.18em;padding:11px 26px;border:1.5px solid rgba(243,239,231,.6);
+  border-radius:999px;margin-bottom:40px;
+}
+h1{font-size:104px;font-weight:900;line-height:1.06;letter-spacing:-.02em;max-width:1000px}
+.sub{font-size:30px;font-weight:300;opacity:.9;margin-top:30px;max-width:880px;line-height:1.5}
+.logo{
+  position:absolute;bottom:64px;right:92px;display:flex;align-items:center;gap:14px;
+  font-size:30px;font-weight:700;letter-spacing:.01em;
+}
+.logo .dot{width:13px;height:13px;border-radius:50%;background:#A8C290;box-shadow:0 0 18px rgba(168,194,144,.9)}
+</style>
+</head>
+<body>
+  <svg class="leaf" viewBox="0 0 100 200" fill="none" stroke="#F3EFE7" stroke-width="1.5">
+    <path d="M50 200 C50 150 50 80 50 10" stroke-linecap="round"/>
+    <path d="M50 150 C30 140 18 120 20 100 C42 108 50 128 50 150Z" fill="#F3EFE7" fill-opacity=".4"/>
+    <path d="M50 120 C70 110 82 90 80 70 C58 78 50 98 50 120Z" fill="#F3EFE7" fill-opacity=".4"/>
+    <path d="M50 90 C30 82 20 62 22 44 C44 52 50 70 50 90Z" fill="#F3EFE7" fill-opacity=".4"/>
+    <path d="M50 62 C68 54 78 36 76 20 C56 28 50 44 50 62Z" fill="#F3EFE7" fill-opacity=".4"/>
+  </svg>
+  <div class="frame"></div>
+  <span class="eyebrow">מדריך דיגיטלי</span>
+  <h1>להפסיק גלולות<br>בלי לפחד מהעור</h1>
+  <p class="sub">המדריך שמכין את העור שלך להפסקת גלולות, צעד אחר צעד.</p>
+  <div class="logo"><span dir="ltr">@linoy.clinic</span><span class="dot"></span></div>
+</body>
+</html>

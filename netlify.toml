@@ -1,0 +1,30 @@
+# הגדרות Netlify לדף הנחיתה (סטטי, בלי build).
+# בהעלאת drag-and-drop הקובץ הזה נקרא אוטומטית מתוך התיקייה.
+
+[build]
+  publish = "."
+
+# כותרות אבטחה בסיסיות לכל הדפים
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# קאשינג ארוך לנכסים שלא משתנים (תמונה, אייקון)
+[[headers]]
+  for = "/og-image.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# og-image.html הוא קובץ מקור לעיצוב התמונה בלבד, שלא יופיע בחיפוש
+[[headers]]
+  for = "/og-image.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
