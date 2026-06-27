@@ -66,28 +66,24 @@ python3 -m http.server 8899
 # גלשי אל http://localhost:8899/index.html
 ```
 
-## אירוח — Netlify + guide.linoyclinic.com
+## אירוח — חי ב-GitHub Pages ✅
 
-הדף סטטי לחלוטין, מאורח ב-Netlify (חינמי) תחת הכתובת **https://guide.linoyclinic.com**.
-כל קובצי ה-OG, ה-`SUCCESS_URL`, וה-sitemap כבר מוגדרים לכתובת הזו.
+הדף כבר באוויר וזמין לכולם בכתובת:
+**https://lgg1234-stack.github.io/linoy-guide-landing/**
 
-### שלב 1 — העלאת האתר (drag and drop)
-1. היכנסי ל-https://app.netlify.com/drop (אפשר עם חשבון גוגל).
-2. גררי את **כל תיקיית `landing`** אל החלון. האתר עולה תוך שניות וקבלת כתובת זמנית (לדוגמה `xxx.netlify.app`).
-3. לעדכון עתידי: גררי שוב את התיקייה לאותו אתר (Deploys → drag and drop), או חברי ל-GitHub לפריסה אוטומטית.
+- מאוחסן ב-GitHub Pages (חינמי) מתוך המאגר `LGG1234-stack/linoy-guide-landing`.
+- כל קובצי ה-OG, ה-`SUCCESS_URL`, וה-sitemap מוגדרים לכתובת הזו, כך שתצוגת השיתוף עובדת מיד.
 
-> קובץ `netlify.toml` שבתיקייה נקרא אוטומטית ומגדיר כותרות אבטחה וקאשינג. אין צורך לגעת בו.
+### איך מעדכנים את הדף בעתיד
+כל שינוי בקבצים → דחיפה למאגר (push ל-branch `main`) → GitHub Pages מתעדכן אוטומטית תוך דקה.
 
-### שלב 2 — חיבור הדומיין guide.linoyclinic.com
-1. ב-Netlify: **Domain settings → Add a domain** → הקלידי `guide.linoyclinic.com`.
-2. Netlify ייתן לך רשומת DNS להוסיף אצל מי שמנהל את הדומיין `linoyclinic.com`:
-   - סוג: **CNAME**
-   - שם / host: `guide`
-   - ערך / target: הכתובת ש-Netlify מציג (בדרך כלל `xxx.netlify.app`)
-3. הוסיפי את הרשומה בלוח ה-DNS של הדומיין. ההפעלה לוקחת בין כמה דקות לכמה שעות.
-4. Netlify מנפיק תעודת HTTPS אוטומטית (Let's Encrypt) ברגע שה-DNS מתעדכן.
+### מעבר לדומיין משלך (אופציונלי) — guide.linoyclinic.com
+אם בהמשך תרצי כתובת ממותגת קצרה:
+1. בלוח ה-DNS של `linoyclinic.com` הוסיפי רשומת **CNAME**: שם `guide`, יעד `lgg1234-stack.github.io`.
+2. במאגר ב-GitHub: **Settings → Pages → Custom domain** → הקלידי `guide.linoyclinic.com` ושמרי.
+3. סמני **Enforce HTTPS** (GitHub מנפיק תעודה אוטומטית).
+4. צריך גם להחליף בקבצים את הכתובת `https://lgg1234-stack.github.io/linoy-guide-landing` ל-`https://guide.linoyclinic.com` (ב-`index.html`, `thank-you.html`, `robots.txt`, `sitemap.xml`). אני יכול לעשות את זה בדקה כשתרצי.
 
-### שלב 3 — בדיקת תצוגת השיתוף
-אחרי שהאתר באוויר, בדקי איך הקישור נראה בשיתוף:
+### בדיקת תצוגת השיתוף
 - פייסבוק / אינסטגרם: https://developers.facebook.com/tools/debug/ (הדביקי את הכתובת ולחצי Scrape Again).
-- וואטסאפ: פשוט שלחי את הקישור לעצמך, התצוגה המקדימה אמורה להופיע עם התמונה הממותגת.
+- וואטסאפ: שלחי את הקישור לעצמך, התצוגה המקדימה אמורה להופיע עם התמונה הממותגת.

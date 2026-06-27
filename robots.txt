@@ -3,4 +3,4 @@ Allow: /
 Disallow: /thank-you.html
 Disallow: /og-image.html
 
-Sitemap: https://guide.linoyclinic.com/sitemap.xml
+Sitemap: https://lgg1234-stack.github.io/linoy-guide-landing/sitemap.xml
